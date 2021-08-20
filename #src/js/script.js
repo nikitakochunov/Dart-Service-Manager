@@ -8,3 +8,5 @@
 @@include('slick-slider.js');
 
 @@include('spoiler.js');
+
+@@include('contact.js');
