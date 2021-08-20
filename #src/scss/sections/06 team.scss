@@ -16,6 +16,36 @@
 
   &__people {
   }
+  @media (max-width: 1200px) {
+    padding: 80px 0;
+    &__text {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      margin-bottom: 25px;
+    }
+  }
+  @media (max-width: 1024px) {
+    padding: 70px 0;
+    &__text {
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 22px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 50px 0;
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+  }
 }
 
 .people {
@@ -44,11 +74,54 @@
 
   &__text {
   }
+  @media (max-width: 1200px) {
+    &__slider--photo {
+      margin-bottom: 30px;
+    }
+
+    &__photo {
+      padding: 0 25px;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    &__slider--photo {
+      margin-bottom: 25px;
+    }
+
+    &__photo {
+      padding: 0 25px;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    &__slider--photo {
+      max-width: 276px;
+      margin-bottom: 20px;
+    }
+
+    &__photo {
+      padding: 0 15px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
 }
 .text-people {
+  @media (max-width: 768px) {
+    max-width: 387px;
+  }
+
   max-width: 645px;
   margin: 0 auto;
-  padding-top: 40px;
   // text-align: center;
   &__title {
     h4 {
@@ -105,6 +178,9 @@
     display: flex;
     align-items: center;
     height: 200px;
+    @media (max-width: 768px) {
+      height: 110px;
+    }
   }
   .slick-slide {
     text-align: center;
@@ -114,10 +190,11 @@
       padding: 0 55px;
       img {
         transform: scale(1.6);
-        // width: 160px;
-        // height: 160px;
       }
       opacity: 1;
+      @media (max-width: 768px) {
+        padding: 0 33px;
+      }
     }
   }
 }
@@ -134,7 +211,6 @@
   .slick-track {
     display: flex;
     align-items: center;
-    height: 200px;
   }
   .slick-slide {
     text-align: center;
