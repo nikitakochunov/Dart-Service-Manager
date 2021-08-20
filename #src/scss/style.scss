@@ -1,0 +1,95 @@
+@import "reset";
+@import "fonts";
+@import "nikita-blanks";
+@import "ibg";
+@import "burger";
+@import "sections";
+
+body {
+  font-family: "Raleway", sans-serif;
+  // font-family: "Roboto", sans-serif;
+}
+
+@include wrapper;
+
+@include container(1440px);
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.button-block {
+  button {
+    width: 150px;
+    height: 55px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family: Raleway;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+}
+
+.text {
+  max-width: 555px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.title {
+  &__text {
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #061e37;
+    @media (max-width: 370px) {
+      font-size: 40px;
+    }
+  }
+}
+.subtitle {
+  &__text {
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #b0bec5;
+    @media (max-width: 370px) {
+      font-size: 20px;
+    }
+  }
+}
+.par {
+  &__text {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #b0bec5;
+  }
+}
+
+//==================================================================================================================================
+.blanks-icons {
+  display: none;
+
+  .fontawesome-icons {
+    background-color: #061e37;
+    i {
+      opacity: 0.2;
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+    }
+  }
+}
+//==================================================================================================================================

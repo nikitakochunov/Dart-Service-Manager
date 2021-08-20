@@ -1,0 +1,142 @@
+.team {
+  padding: 100px 0;
+  &__row {
+  }
+
+  &__text {
+    margin-bottom: 78px;
+  }
+
+  &__title {
+    margin-bottom: 29px;
+  }
+
+  &__par {
+  }
+
+  &__people {
+  }
+}
+
+.people {
+  &__slider {
+    display: flex;
+  }
+
+  &__slider--photo {
+    justify-content: center;
+    align-items: center;
+    max-width: 460px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__photo {
+    padding: 0 25px;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__slider--info {
+  }
+
+  &__text {
+  }
+}
+.text-people {
+  max-width: 645px;
+  margin: 0 auto;
+  padding-top: 40px;
+  // text-align: center;
+  &__title {
+    h4 {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 700;
+      color: #061e37;
+    }
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    p {
+      font-size: 15px;
+      line-height: 25px;
+      font-weight: 400;
+      color: #90a4ae;
+    }
+    margin-bottom: 30px;
+  }
+
+  &__socials {
+  }
+}
+.socials-people {
+  &__list {
+    display: flex;
+    justify-content: center;
+    li {
+      padding: 0 15px;
+    }
+  }
+
+  &__link {
+    i {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 400;
+      color: #90a4ae;
+    }
+  }
+}
+
+.people__slider--photo.slick-slider {
+  position: relative;
+  max-height: 100%;
+  .slick-track,
+  .slick-list {
+  }
+  .slick-list {
+    overflow: hidden;
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+    height: 200px;
+  }
+  .slick-slide {
+    text-align: center;
+    transition: 0.3s all;
+    opacity: 0.2;
+    &.slick-current {
+      padding: 0 55px;
+      img {
+        transform: scale(1.6);
+        // width: 160px;
+        // height: 160px;
+      }
+      opacity: 1;
+    }
+  }
+}
+
+.people__slider--info.slick-slider {
+  position: relative;
+  max-height: 100%;
+  .slick-track,
+  .slick-list {
+  }
+  .slick-list {
+    overflow: hidden;
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+    height: 200px;
+  }
+  .slick-slide {
+    text-align: center;
+  }
+}

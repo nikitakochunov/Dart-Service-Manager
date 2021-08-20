@@ -1,0 +1,60 @@
+@mixin wrapper() {
+  .wrapper {
+    min-height: 100%;
+    overflow: hidden;
+  }
+}
+
+@mixin container($containerWidth, $padding: 15px) {
+  .container {
+    max-width: $containerWidth;
+    margin: 0 auto;
+    padding: 0 $padding;
+  }
+}
+
+@mixin btnHvr($bgcolor) {
+  button {
+    background-color: $bgcolor;
+    &:hover {
+      background-color: lighten($bgcolor, 10);
+    }
+  }
+}
+
+@mixin bg($image: none, $size: 100%, $position: center, $repeat: no-repeat) {
+  background: {
+    image: $image;
+    size: $size;
+    position: $position;
+    repeat: $repeat;
+  }
+}
+
+@mixin flex($direction: row, $wrap: nowrap) {
+  display: flex;
+  flex: {
+    direction: $direction;
+    wrap: $wrap;
+  }
+}
+
+@mixin triangle($direction, $color: #fff, $mainSize: 100px, $size1: 50px, $size2: 50px) {
+  @if $direction == up {
+    border-left: $size1 solid transparent;
+    border-right: $size2 solid transparent;
+    border-bottom: $mainSize solid $color;
+  } @else if $direction == down {
+    border-left: $size1 solid transparent;
+    border-right: $size2 solid transparent;
+    border-top: $mainSize solid $color;
+  } @else if $direction == left {
+    border-left: $size1 solid transparent;
+    border-right: $mainSize solid $color;
+    border-bottom: $size2 solid transparent;
+  } @else if $direction == right {
+    border-right: $size1 solid transparent;
+    border-left: $mainSize solid $color;
+    border-bottom: $size2 solid transparent;
+  }
+}

@@ -1,0 +1,130 @@
+@mixin itemColor($color) {
+  .item-num__body {
+    background-color: $color;
+  }
+  .item-num__icon {
+    span {
+      color: $color;
+    }
+  }
+}
+
+.numbers {
+  &__row {
+  }
+
+  &__list {
+    @include flex();
+  }
+
+  &__item {
+    flex: 1 1 25%;
+  }
+  @media (max-width: 1200px) {
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      flex: 1 1 50%;
+    }
+  }
+  // @media (max-width: 650px) {
+  //   &__item {
+  //     flex: 1 1 100%;
+  //   }
+  // }
+}
+
+.item-num {
+  &__body {
+    padding: 45px 15px;
+    @include flex();
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    @include flex();
+    justify-content: center;
+    align-items: center;
+    span {
+      font-family: "Material Icons";
+      font-size: 30px;
+      line-height: 25px;
+      font-weight: 400;
+    }
+    margin-right: 23px;
+  }
+
+  &__title {
+    // width: 135px;
+    width: 120px;
+    h4 {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    // padding-right: 15px;
+  }
+
+  &:nth-child(1) {
+    @include itemColor(#80d8ff);
+  }
+  &:nth-child(2) {
+    @include itemColor(#82b1ff);
+  }
+  &:nth-child(3) {
+    @include itemColor(#b388ff);
+  }
+  &:nth-child(4) {
+    @include itemColor(#ea80fc);
+  }
+
+  @media (max-width: 1200px) {
+    &__body {
+      padding: 35px 15px;
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      span {
+        font-family: "Material Icons";
+        font-size: 25px;
+      }
+      margin-right: 20px;
+    }
+
+    &__title {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    &__body {
+      padding: 20px 15px;
+    }
+
+    &__icon {
+      width: 45px;
+      height: 45px;
+      span {
+        font-family: "Material Icons";
+        font-size: 23px;
+      }
+      margin-right: 18px;
+    }
+
+    &__title {
+      h4 {
+        font-size: 16px;
+      }
+    }
+  }
+}

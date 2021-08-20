@@ -1,0 +1,107 @@
+/* Burger Styles ================================================================================================================ */
+// @import 'burger' делаю в файле стилей style.scss
+
+$textColor: #00b8d4; // цвет для пунктов меню
+$burgerColor: #fff; // цвет неактивного бургера
+$burgerActiveColor: #00b8d4; // цвет активного бургера
+$menuBgColor: #fff; // цвет фона выползающего меню
+
+// mixin подключаю внутри блока menu
+@mixin burger() {
+  @media (max-width: 767px) {
+    justify-content: flex-end;
+
+    &__body {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 4;
+      background-color: $menuBgColor;
+      padding: 120px 0 20px;
+      overflow: auto;
+      transform: translate(0, -100%);
+      transition: 0.3s all;
+      &.active {
+        transform: translate(0, 0);
+      }
+    }
+
+    &__list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__item {
+      padding: 15px 0px 15px 0px;
+    }
+
+    &__link {
+      font-size: 30px;
+      color: $textColor;
+    }
+
+    &__burger {
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      // top: 0;
+      // right: 20px;
+      width: 30px;
+      height: 20px;
+      z-index: 5;
+
+      &.active {
+        span {
+          transform: scale(0);
+          background-color: $burgerActiveColor;
+        }
+        &::before {
+          background-color: $burgerActiveColor;
+          transform: rotate(45deg);
+          top: 9px;
+        }
+
+        &::after {
+          background-color: $burgerActiveColor;
+          transform: rotate(-45deg);
+          bottom: 9px;
+        }
+      }
+
+      & span {
+        background-color: $burgerColor;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 8px;
+        transition: 0.3s all;
+      }
+      &::before,
+      &::after {
+        content: "";
+        background-color: $burgerColor;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: 0.3s all;
+      }
+      &::before {
+        top: 0px;
+      }
+      &::after {
+        bottom: 2px;
+      }
+    }
+  }
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+/* ============================================================================================================================== */

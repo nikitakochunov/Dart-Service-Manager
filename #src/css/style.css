@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+i {
+  font-size: 80px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #80d8ff;
+}
+
+img {
+  color: red;
+}

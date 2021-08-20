@@ -1,0 +1,127 @@
+.header {
+  position: relative;
+  z-index: 2;
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
+
+  @media (max-width: 1024px) {
+    padding-top: 40px;
+  }
+
+  padding-top: 52px;
+  &__row {
+    height: 26px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__column {
+    flex: 0 1 33.333%;
+    &:first-child {
+      display: flex;
+      align-items: center;
+    }
+    &:nth-child(2) {
+      .header__button {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    margin-right: 10px;
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &__title {
+    .title-header__text {
+      font-size: 15px;
+      line-height: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #ffffff;
+      span {
+        font-weight: 800;
+      }
+      margin-right: 15px;
+    }
+  }
+
+  .menu {
+    position: relative;
+    @include flex();
+    align-items: center;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      padding: 0 25px;
+      &--active {
+        .menu__link {
+          color: #061e37 !important;
+          font-weight: 800;
+        }
+      }
+    }
+
+    &__link {
+      font-size: 15px;
+      line-height: 25px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    @include burger();
+  }
+
+  &__button {
+    text-align: right;
+  }
+
+  .button-header {
+    button {
+      width: 80px;
+      border: 1px solid #ffffff;
+      border-radius: 2px;
+      background-color: transparent;
+      font-size: 12px;
+      line-height: 25px;
+      font-weight: 400;
+      color: #ffffff;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__column {
+      flex: 0 1 50%;
+      &:last-child {
+        display: none;
+      }
+    }
+    .menu {
+      &__button {
+        display: block;
+        padding: 20px 0px 0px 0px;
+        text-align: center;
+        button {
+          width: 180px;
+          height: 50px;
+          border: 1px solid #00b8d4;
+          border-radius: 2px;
+          background-color: transparent;
+          font-size: 20px;
+          color: #00b8d4;
+        }
+      }
+    }
+  }
+}

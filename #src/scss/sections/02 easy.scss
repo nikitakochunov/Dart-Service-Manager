@@ -1,0 +1,182 @@
+.easy {
+  padding: 100px 0;
+  &__row {
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 95px;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__par {
+  }
+
+  &__body {
+    margin-bottom: 78px;
+  }
+
+  &__list {
+    @include flex();
+  }
+
+  &__item {
+    &:nth-child(2) {
+      padding: 0 200px;
+    }
+  }
+
+  &__button {
+    @include btnHvr(#1de9b6);
+  }
+
+  @media (max-width: 1200px) {
+    padding: 80px 0;
+    &__item {
+      &:nth-child(2) {
+        padding: 0 160px;
+      }
+    }
+    &__text {
+      margin-bottom: 75px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__subtitle {
+      margin-bottom: 18px;
+    }
+
+    &__body {
+      margin-bottom: 70px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding: 70px 0;
+    &__item {
+      &:nth-child(2) {
+        padding: 0 140px;
+      }
+    }
+    &__text {
+      margin-bottom: 65px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      margin-bottom: 16px;
+    }
+
+    &__body {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+    &__item {
+      &:nth-child(2) {
+        padding: 0 0;
+      }
+    }
+    &__text {
+      margin-bottom: 45px;
+    }
+
+    &__body {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+    &__item {
+      &:nth-child(2) {
+        padding: 60px 0;
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    &__button {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.item-easy {
+  &__body {
+    @include flex(column);
+    text-align: center;
+  }
+
+  &__icon {
+    i {
+      font-size: 80px;
+      line-height: 25px;
+      font-weight: 400;
+
+      &.icofont-tasks-alt {
+        color: #b388ff;
+      }
+      &.icofont-team {
+        color: #80d8ff;
+      }
+      &.icofont-worker {
+        color: #ea80fc;
+      }
+    }
+    margin-bottom: 45px;
+  }
+
+  &__title {
+    h4 {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 600;
+      color: #061e37;
+    }
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    p {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #78909c;
+    }
+  }
+  @media (max-width: 1000px) {
+    &__icon {
+      margin-bottom: 35px;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
+  @media (max-width: 768px) {
+    &__icon {
+      margin-bottom: 25px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+  }
+}

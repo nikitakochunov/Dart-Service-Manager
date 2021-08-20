@@ -1,0 +1,307 @@
+//* Section Customers Styles ==========================================================================================================
+.customers {
+  padding: 40px 0;
+  @include bg(url(../img/bg/02.jpg), cover);
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-53deg, #00b8d4 -3%, #1de9b6 104%);
+    opacity: 0.95;
+  }
+  &__row {
+    @include flex();
+    position: relative;
+    z-index: 3;
+  }
+
+  &__text {
+    padding-top: 80px;
+    flex: 0 1 50%;
+    padding-right: 165px;
+  }
+
+  &__title {
+    max-width: 450px;
+    .title__text {
+      color: #ffffff;
+    }
+    margin-bottom: 19px;
+  }
+
+  &__par {
+    .par__text {
+      color: #ffffff;
+    }
+    margin-bottom: 78px;
+  }
+
+  &__button {
+    @include btnHvr(#061e37);
+
+    button {
+      width: 150px;
+    }
+  }
+
+  &__body {
+    flex: 0 1 50%;
+  }
+
+  // Breakpoints Start ================================================================================================================
+  @media (max-width: 1200px) {
+    &__text {
+      padding-right: 130px;
+    }
+  }
+  @media (max-width: 1100px) {
+    padding: 30px 0;
+    &__text {
+      padding-right: 100px;
+    }
+    &__title {
+      max-width: 450px;
+      margin-bottom: 16px;
+      .title__text {
+      }
+    }
+
+    &__par {
+      margin-bottom: 60px;
+    }
+  }
+  @media (max-width: 900px) {
+    padding: 80px 0;
+    &__row {
+      flex-direction: column;
+    }
+
+    &__text {
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      text-align: center;
+      max-width: none;
+    }
+
+    &__par {
+      margin-bottom: 30px;
+    }
+
+    &__button {
+    }
+
+    &__body {
+      flex: 1 1 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: 350px) {
+    &__button button {
+      width: 100% !important;
+    }
+  }
+  // Breakpoints End =================================================================================================================
+}
+//* ==================================================================================================================================
+
+//* Slider Styles ====================================================================================================================
+$photo-margin: 50px;
+@import "../slick-slider";
+
+.slider-customers {
+  max-height: 100%;
+  &__item {
+    padding: 35px 0;
+  }
+
+  &__body {
+    @include flex();
+    align-items: center;
+  }
+
+  &__photo {
+    padding-right: $photo-margin;
+  }
+
+  &__text {
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 30px 60px 30px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    h4 {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 700;
+      color: #061e37;
+    }
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    p {
+      font-size: 15px;
+      line-height: 25px;
+      font-weight: 400;
+      font-style: italic;
+      color: #78909c;
+    }
+  }
+
+  // Breakpoints Start ================================================================================================================
+  @media (max-width: 1100px) {
+    &__item {
+      padding: 30px 0;
+    }
+
+    &__body {
+      @include flex();
+      align-items: center;
+    }
+
+    &__text {
+      padding: 28px 55px 28px 28px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__item {
+      padding: 0 50px 0 50px;
+    }
+
+    &__body {
+      @include flex();
+      flex-direction: column;
+    }
+
+    &__photo {
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      padding: 20px 30px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+  }
+  @media (max-width: 500px) {
+    &__item {
+      padding: 0 35px 0 35px;
+    }
+
+    &__text {
+      padding: 15px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+  }
+  // Breakpoints End =================================================================================================================
+}
+
+//* ==================================================================================================================================
+
+.customers {
+  .slick-slider {
+    position: relative;
+    max-height: 100%;
+    .slick-track,
+    .slick-list {
+    }
+    .slick-list {
+      overflow: hidden;
+    }
+    .slick-track {
+      display: flex;
+      flex-direction: column;
+      // align-items: flex-start;
+      @media (max-width: 900px) {
+        flex-direction: row;
+      }
+    }
+    .slick-slide {
+      width: 100% !important;
+    }
+  }
+
+  .slick-slider {
+    position: relative;
+  }
+  .slick-slider {
+    .slick-arrow {
+      position: absolute;
+      transform: translate(-50%, 0);
+      left: 50%;
+      margin-left: (($photo-margin + 65px)/ 2);
+      z-index: 50;
+      font-size: 0;
+      width: 40px;
+      height: 30px;
+    }
+    .slick-arrow.slick-prev {
+      top: -10px;
+      background: url("../img/arrows/keyboard_arrow_up_white_24dp.svg") 0 0 / 100% no-repeat;
+    }
+
+    .slick-arrow.slick-next {
+      bottom: 0;
+      background: url("../img/arrows/keyboard_arrow_down_white_24dp.svg") 0 0 / 100% no-repeat;
+    }
+
+    .slick-arrow.slick-disabled {
+      opacity: 0.3;
+    }
+    @media (max-width: 900px) {
+      .slick-arrow {
+        position: absolute;
+        transform: translate(0, -50%);
+        left: 0;
+        top: 50%;
+        margin-left: 0;
+        width: 40px;
+        height: 30px;
+      }
+      .slick-arrow.slick-prev {
+        left: -17px;
+        top: 50%;
+        transform: rotate(-90deg);
+      }
+
+      .slick-arrow.slick-next {
+        bottom: 0;
+        left: auto;
+        right: -5px;
+        transform: rotate(-90deg);
+      }
+
+      .slick-arrow.slick-disabled {
+      }
+    }
+  }
+}
