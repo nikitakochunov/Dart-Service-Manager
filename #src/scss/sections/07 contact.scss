@@ -1,0 +1,99 @@
+.contact {
+  padding: 49px 0;
+  background-color: #fafafa;
+  &__row {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    margin-bottom: 49px;
+  }
+
+  &__title {
+    margin-bottom: 29px;
+  }
+
+  &__par {
+    p {
+      color: #061e37;
+    }
+  }
+
+  &__form {
+  }
+}
+.form {
+  &__item {
+    @include flex(row, wrap);
+    align-items: center;
+    margin: 0 -20px;
+  }
+
+  &__input,
+  &__textarea {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    input,
+    textarea {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__input {
+    flex: 0 1 50%;
+
+    input {
+      width: 280px;
+      height: 50px;
+      border: 1px solid #061e37;
+      border-radius: 5px;
+    }
+  }
+
+  &__textarea {
+    textarea {
+      width: 600px;
+      height: 150px;
+      border: 1px solid #061e37;
+      border-radius: 5px;
+      padding-top: 20px;
+      resize: none;
+    }
+    flex: 0 1 100%;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    flex: 0 1 auto;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 9px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 400;
+      color: #061e37;
+      &.checked {
+        display: none;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: #061e37;
+    }
+  }
+
+  &__button {
+    flex: 1 1 auto;
+    padding-right: 20px;
+    text-align: right;
+
+    @include btnHvr(#1de9b6);
+  }
+}
