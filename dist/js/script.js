@@ -933,3 +933,17 @@ $(document).ready(function () {
     }
   });
 });
+var checkboxNotСhecked = document.querySelector('.form__checkbox span.not-checked');
+var checkboxСhecked = document.querySelector('.form__checkbox span.checked');
+var checkbox = document.querySelector('.form__checkbox');
+checkbox.addEventListener('click', function (event) {
+  if (checkbox.classList.contains('active')) {
+    checkboxNotСhecked.style.display = 'block';
+    checkboxСhecked.style.display = 'none';
+    checkbox.classList.remove('active');
+  } else {
+    checkboxNotСhecked.style.display = 'none';
+    checkboxСhecked.style.display = 'block';
+    checkbox.classList.add('active');
+  }
+});
