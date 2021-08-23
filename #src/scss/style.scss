@@ -35,6 +35,9 @@ body {
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
+    @media (max-width: 370px) {
+      width: 100% !important;
+    }
   }
 }
 
