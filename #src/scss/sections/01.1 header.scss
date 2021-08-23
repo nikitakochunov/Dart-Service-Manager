@@ -18,10 +18,7 @@
 
   &__column {
     flex: 0 1 33.333%;
-    &:first-child {
-      display: flex;
-      align-items: center;
-    }
+
     &:nth-child(2) {
       .header__button {
         display: none;
@@ -29,57 +26,11 @@
     }
   }
 
-  &__logo {
-    margin-right: 10px;
-    img {
-      max-height: 100%;
-    }
-  }
-
-  &__title {
-    .title-header__text {
-      font-size: 15px;
-      line-height: 15px;
-      font-weight: 400;
-      text-transform: uppercase;
-      color: #ffffff;
-      span {
-        font-weight: 800;
-      }
-      margin-right: 15px;
-    }
-  }
-
   .menu {
     position: relative;
-    @include flex();
-    align-items: center;
-
-    &__list {
-      display: flex;
-    }
-
-    &__item {
-      padding: 0 25px;
-      &--active {
-        .menu__link {
-          color: #061e37 !important;
-          font-weight: 800;
-        }
-      }
-    }
-
-    &__link {
-      font-size: 15px;
-      line-height: 25px;
-      font-weight: 600;
-      color: #ffffff;
-    }
-
     &__button {
       display: none;
     }
-
     @include burger();
   }
 
@@ -107,7 +58,7 @@
         display: none;
       }
     }
-    .menu {
+    &__menu {
       &__button {
         display: block;
         padding: 20px 0px 0px 0px;
@@ -123,5 +74,57 @@
         }
       }
     }
+  }
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    margin-right: 10px;
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &__title {
+    h1 {
+      font-size: 15px;
+      line-height: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #ffffff;
+      span {
+        font-weight: 800;
+      }
+      margin-right: 15px;
+    }
+  }
+}
+
+.menu {
+  @include flex();
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 0 25px;
+    &--active {
+      .menu__link {
+        color: #061e37 !important;
+        font-weight: 800;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 600;
+    color: #ffffff;
   }
 }
