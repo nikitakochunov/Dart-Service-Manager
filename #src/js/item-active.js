@@ -1,5 +1,5 @@
 const itemsList = document.querySelector('.menu__list')
-const items = document.querySelectorAll('.menu__item')
+const items = document.querySelectorAll('.header__menu .menu__item')
 
 itemsList.addEventListener('click', function (event) {
   event.preventDefault()
@@ -9,6 +9,7 @@ itemsList.addEventListener('click', function (event) {
         if (item.classList.contains('menu__item--active')) {
           item.classList.remove('menu__item--active')
         }
+        console.log(1);
       })
     }
     event.target.parentNode.classList.add('menu__item--active')
