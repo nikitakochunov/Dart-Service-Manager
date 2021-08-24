@@ -20,6 +20,32 @@
   &__menu {
     justify-content: flex-end;
   }
+  @media (max-width: 1200px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 1000px) {
+    padding: 70px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+    &__row {
+      @include flex(column);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__column {
+      flex: 0 1 auto;
+      &:nth-child(1),
+      &:nth-child(3) {
+        margin-bottom: 17px;
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
 }
 
 .policy {
@@ -56,6 +82,14 @@
       opacity: 1;
     }
   }
+  @media (max-width: 768px) {
+    &__list {
+      margin: 0 -15px;
+    }
+    &__item {
+      padding: 0 15px;
+    }
+  }
 }
 .socials-footer {
   &__list {
@@ -76,6 +110,9 @@
       color: #ffffff;
       &:hover {
         opacity: 1;
+      }
+      @media (max-width: 768px) {
+        font-size: 25px;
       }
     }
   }
