@@ -1,4 +1,4 @@
-
+document.addEventListener('click', event => event.preventDefault())
 
 @@include('item-active.js');
 
