@@ -2,19 +2,9 @@
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-// Применение класса ibg========================================================
-function ibg() {
-  var ibg = document.querySelectorAll(".ibg");
-
-  for (var i = 0; i < ibg.length; i++) {
-    if (ibg[i].querySelector('img')) {
-      ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
-    }
-  }
-}
-
-ibg();
-;
+document.addEventListener('click', function (event) {
+  return event.preventDefault();
+});
 var itemsList = document.querySelector('.menu__list');
 var items = document.querySelectorAll('.header__menu .menu__item');
 itemsList.addEventListener('click', function (event) {
