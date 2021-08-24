@@ -3,6 +3,8 @@
   background-color: #061e37;
   &__row {
     @include flex(row, wrap);
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__column {
@@ -10,6 +12,9 @@
     &:nth-child(1),
     &:nth-child(2) {
       margin-bottom: 54px;
+    }
+    &:nth-child(1) {
+      flex: 0 1 auto;
     }
   }
   &__menu {
