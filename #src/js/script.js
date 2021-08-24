@@ -1,4 +1,4 @@
-@@include('ibg.js');
+
 
 @@include('item-active.js');
 
