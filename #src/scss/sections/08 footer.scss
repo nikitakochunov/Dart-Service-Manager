@@ -24,12 +24,32 @@
   }
 
   &__item {
+    padding: 0 22px;
+    position: relative;
+    &:nth-child(1),
+    &:nth-child(2) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translate(50%, -50%);
+        right: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #ffffff;
+      }
+    }
+  }
+  &__link {
     opacity: 0.5;
     font-size: 15px;
     line-height: 25px;
     font-weight: 400;
     color: #ffffff;
-    padding: 0 22px;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 .socials-footer {
@@ -49,6 +69,9 @@
       font-weight: 400;
       letter-spacing: 0.03em;
       color: #ffffff;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
